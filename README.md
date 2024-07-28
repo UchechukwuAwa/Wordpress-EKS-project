@@ -17,9 +17,9 @@ This project involves creating a containerized web application using Docker and 
 - WordPress
 
 ### Prerequisites
-Before starting, the following as to be installed and configured:
+Before starting, the following has to be installed and configured:
 
-Docker
-AWS CLI
-kubectl
-eksctl
+- Docker
+- AWS CLI
+- kubectl
+- eksctl
