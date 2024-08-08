@@ -4,17 +4,17 @@ phases:
   pre_build:
     commands:
       - echo Logging in to Amazon ECR...
-      - aws ecr get-login-password --region us-east-2 | docker login --username AWS --password-stdin 767397882405.dkr.ecr.us-east-2.amazonaws.com
+      - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin ************.dkr.ecr.us-east-1.amazonaws.com
   build:
     commands:
       - echo Build started on `date`
       - echo Pulling the Docker image php:8.3-apache from private Amazon ECR
-      - docker pull 767397882405.dkr.ecr.us-east-2.amazonaws.com/php:8.3-apache
+      - docker pull ************.dkr.ecr.us-east-1.amazonaws.com/php:8.3-apache
       - echo Building the Docker image...          
       - docker build -t kuberweavers .
-      - docker tag kuberweavers:latest 767397882405.dkr.ecr.us-east-2.amazonaws.com/kuberweavers:latest    
+      - docker tag kuberweavers:latest ************.dkr.ecr.us-east-1.amazonaws.com/kuberweavers:latest    
   post_build:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
-      - docker push 767397882405.dkr.ecr.us-east-2.amazonaws.com/kuberweavers
+      - docker push ************.dkr.ecr.us-east-1.amazonaws.com/kuberweavers
