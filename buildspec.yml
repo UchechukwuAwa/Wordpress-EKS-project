@@ -8,7 +8,7 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-      - echo Pulling the Docker image from Dockerfile
+      - echo Pulling the Docker image from ECR
       - docker pull 300958834981.dkr.ecr.us-east-1.amazonaws.com/wordpress:1.0
       - echo Building the Docker image...          
       - docker build -t wordpress .
