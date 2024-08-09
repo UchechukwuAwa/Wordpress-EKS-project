@@ -4,7 +4,7 @@
 # PLEASE DO NOT EDIT IT DIRECTLY.
 #
 
-FROM 300958834981.dkr.ecr.us-east-1.amazonaws.com/wordpress:1.0
+FROM php:8.3-apache
 
 # persistent dependencies
 RUN set -eux; \
