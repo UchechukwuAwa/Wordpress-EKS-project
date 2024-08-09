@@ -12,7 +12,7 @@ phases:
       - docker pull php:8.3-apache
       - echo Building the Docker image...          
       - docker build -t wordpress .
-      - docker tag wordpress:2.0 300958834981.dkr.ecr.us-east-1.amazonaws.com/wordpress:2.0    
+      - docker tag wordpress:1.0 300958834981.dkr.ecr.us-east-1.amazonaws.com/wordpress:2.0    
   post_build:
     commands:
       - echo Build completed on `date`
