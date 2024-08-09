@@ -9,7 +9,7 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Pulling the Docker image from ECR
-      - docker pull 300958834981.dkr.ecr.us-east-1.amazonaws.com/wordpress:1.0
+      - docker pull 300958834981.dkr.ecr.us-east-1.amazonaws.com/wordpress:latest
       - echo Building the Docker image...          
       - docker build -t wordpress .
       - docker tag wordpress:latest 300958834981.dkr.ecr.us-east-1.amazonaws.com/wordpress:latest   
@@ -17,4 +17,4 @@ phases:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
-      - docker push 300958834981.dkr.ecr.us-east-1.amazonaws.com/wordpress
+      - docker push 300958834981.dkr.ecr.us-east-1.amazonaws.com/wordpress:latest
