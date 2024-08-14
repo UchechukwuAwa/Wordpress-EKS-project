@@ -9,7 +9,7 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Pulling the Docker image php:latest from private Amazon ECR
-      - docker pull 300958834981.dkr.ecr.us-east-1.amazonaws.com/php:latest
+      - docker pull php:8.3-apache
       - echo Building the Docker image...          
       - docker build -t wordpress .
       - docker tag wordpress:latest 300958834981.dkr.ecr.us-east-1.amazonaws.com/wordpress:latest   
