@@ -17,4 +17,4 @@ phases:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
-      - docker push 300958834981.dkr.ecr.us-east-1.amazonaws.com/php
+      - docker push 300958834981.dkr.ecr.us-east-1.amazonaws.com/wordpress
