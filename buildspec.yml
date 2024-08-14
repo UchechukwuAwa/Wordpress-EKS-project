@@ -8,8 +8,8 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-      - echo Pulling the Docker image
-      - docker pull php:8.2-apache
+      - echo Pulling the Docker image php:latest from private Amazon ECR
+      - docker pull 300958834981.dkr.ecr.us-east-1.amazonaws.com/php:latest
       - echo Building the Docker image...          
       - docker build -t wordpress .
       - docker tag wordpress:latest 300958834981.dkr.ecr.us-east-1.amazonaws.com/wordpress:latest   
@@ -17,4 +17,4 @@ phases:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
-      - docker push 300958834981.dkr.ecr.us-east-1.amazonaws.com/wordpress
+      - docker push 300958834981.dkr.ecr.us-east-1.amazonaws.com/kuberweavers
