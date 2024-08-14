@@ -4,7 +4,7 @@
 # PLEASE DO NOT EDIT IT DIRECTLY.
 #
 
-FROM php:8.2-apache
+FROM 300958834981.dkr.ecr.us-east-1.amazonaws.com/php:latest
 
 # persistent dependencies
 RUN set -eux; \
